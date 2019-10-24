@@ -40,6 +40,23 @@ class ViewController: UIViewController {
   @IBAction func pinchGestureRecognized(_ sender: UIPinchGestureRecognizer) {
 
   }
+  
+  var layer: CALayer {
+    return viewForLayer.layer
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setUpLayer()
+  }
+  
+  func setUpLayer() {
+    layer.backgroundColor = UIColor.blue.cgColor
+    layer.borderWidth = 100.0
+    layer.borderColor = UIColor.red.cgColor
+    layer.shadowOpacity = 0.7
+    layer.shadowRadius = 10.0
+  }
 }
 
 
